@@ -1,0 +1,51 @@
+{
+  "originHash" : "7bea29222e10cc1965fb32571c5d21e3c6cc6e7ff12c37a192a777d053d44ee0",
+  "pins" : [
+    {
+      "identity" : "swift-incits-4-1986",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-standards/swift-incits-4-1986",
+      "state" : {
+        "revision" : "17fcd28216139523ac0c11145df726688e1764db",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "swift-memory-allocation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/coenttb/swift-memory-allocation",
+      "state" : {
+        "revision" : "0efbfb98b4a9dbc958e7c45b4f5a5cfa29cdbcb8",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "swift-rfc-4648",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-standards/swift-rfc-4648",
+      "state" : {
+        "revision" : "605144b15521a55d264934a3b754f62ecdaca7db",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "swift-standards",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-standards/swift-standards",
+      "state" : {
+        "revision" : "055b3bcb304c15dbf7250918153eecabfb80156f",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "swift-testing-performance",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/coenttb/swift-testing-performance",
+      "state" : {
+        "revision" : "3694d3733ba9d6f8035c48fe48ab189be840da61",
+        "version" : "0.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

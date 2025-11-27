@@ -1,0 +1,112 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-incits-4-1986",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swift-standards/swift-incits-4-1986",
+          "name" : "swift-incits-4-1986"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "17fcd28216139523ac0c11145df726688e1764db",
+            "version" : "0.5.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-incits-4-1986"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-memory-allocation",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/coenttb/swift-memory-allocation",
+          "name" : "swift-memory-allocation"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "0efbfb98b4a9dbc958e7c45b4f5a5cfa29cdbcb8",
+            "version" : "0.1.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-memory-allocation"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-rfc-4291",
+          "kind" : "fileSystem",
+          "location" : "/Users/coen/Developer/swift-standards/swift-rfc-4291",
+          "name" : "swift-rfc-4291"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/coen/Developer/swift-standards/swift-rfc-4291"
+        },
+        "subpath" : "swift-rfc-4291"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-rfc-4648",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swift-standards/swift-rfc-4648",
+          "name" : "swift-rfc-4648"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "605144b15521a55d264934a3b754f62ecdaca7db",
+            "version" : "0.2.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-rfc-4648"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-standards",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swift-standards/swift-standards",
+          "name" : "swift-standards"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "055b3bcb304c15dbf7250918153eecabfb80156f",
+            "version" : "0.5.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-standards"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-testing-performance",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/coenttb/swift-testing-performance",
+          "name" : "swift-testing-performance"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "3694d3733ba9d6f8035c48fe48ab189be840da61",
+            "version" : "0.1.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-testing-performance"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}
