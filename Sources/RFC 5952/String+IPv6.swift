@@ -15,19 +15,12 @@
 //
 // Canonical text representation of IPv6 addresses per RFC 5952
 
-public import INCITS_4_1986
 import RFC_4291
 
 extension String {
-    /// Creates the canonical text representation of an IPv6 address
+    /// Creates the canonical text representation of an IPv6 address per RFC 5952
     ///
-    /// This is a convenience transformation that composes through the canonical
-    /// byte representation:
-    /// ```
-    /// IPv6.Address → [UInt8] (ASCII) → String (UTF-8 interpretation)
-    /// ```
-    ///
-    /// The transformation implements RFC 5952's canonical format:
+    /// Implements RFC 5952's canonical format:
     /// 1. Lowercase hexadecimal (Section 4.3)
     /// 2. Leading zeros suppressed (Section 4.1)
     /// 3. `::` compresses longest zero run (Section 4.2)
@@ -35,9 +28,10 @@ extension String {
     ///
     /// ## Category Theory
     ///
-    /// This is functor composition - the String transformation is derived from
-    /// the more universal [UInt8] transformation. ASCII is a subset of UTF-8,
-    /// so this conversion is always safe.
+    /// Derived composition through canonical byte representation:
+    /// ```
+    /// IPv6.Address → [UInt8] (ASCII) → String (UTF-8)
+    /// ```
     ///
     /// ## Examples
     ///
@@ -56,11 +50,9 @@ extension String {
     /// ```
     ///
     /// - Parameter address: The IPv6 address to represent
-    public init(
-        _ address: RFC_4291.IPv6.Address
-    ) {
+    public init(_ address: RFC_4291.IPv6.Address) {
         // Compose through canonical byte representation
         // ASCII ⊂ UTF-8, so this is always valid
-        self.init(decoding: [UInt8](ascii: address), as: UTF8.self)
+        self.init(decoding: [UInt8](address), as: UTF8.self)
     }
 }
