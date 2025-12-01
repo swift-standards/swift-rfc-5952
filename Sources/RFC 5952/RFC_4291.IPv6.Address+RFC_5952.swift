@@ -44,10 +44,10 @@ extension RFC_4291.IPv6.Address {
     static public func serialize<Buffer>(
         _ address: RFC_4291.IPv6.Address,
         into buffer: inout Buffer
-    ) where Buffer : RangeReplaceableCollection, Buffer.Element == UInt8 {
+    ) where Buffer: RangeReplaceableCollection, Buffer.Element == UInt8 {
         let segments = [
             address.segments.0, address.segments.1, address.segments.2, address.segments.3,
-            address.segments.4, address.segments.5, address.segments.6, address.segments.7
+            address.segments.4, address.segments.5, address.segments.6, address.segments.7,
         ]
 
         // RFC 5952 Section 4.2: Find longest run of consecutive zeros
@@ -83,7 +83,8 @@ extension RFC_4291.IPv6.Address {
 
         for index in 0..<8 {
             // Handle compression
-            if shouldCompress && index >= longestZeroRun.start && index < longestZeroRun.start + longestZeroRun.length {
+            if shouldCompress && index >= longestZeroRun.start
+                && index < longestZeroRun.start + longestZeroRun.length {
                 if index == longestZeroRun.start {
                     // Section 4.2.2: "::" replaces the run
                     buffer.append(.ascii.colon)

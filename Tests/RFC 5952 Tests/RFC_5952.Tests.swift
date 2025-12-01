@@ -11,8 +11,9 @@
 // ===----------------------------------------------------------------------===//
 
 import Testing
-@testable import RFC_5952
+
 @testable import RFC_4291
+@testable import RFC_5952
 
 @Suite("RFC 5952: IPv6 Text Representation Tests")
 struct RFC5952Tests {
@@ -22,7 +23,16 @@ struct RFC5952Tests {
     @Test("RFC 5952 Section 4.1: Leading zeros MUST be suppressed")
     func leadingZeroSuppression() throws {
         // 2001:0db8:0000:0000:0000:0000:0000:0001 → 2001:db8::1
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0db8, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0db8,
+            0x0000,
+            0x0000,
+            0x0000,
+            0x0000,
+            0x0000,
+            0x0001
+        )
         let text = String(address)
 
         #expect(text == "2001:db8::1")
@@ -35,7 +45,16 @@ struct RFC5952Tests {
     @Test("RFC 5952 Section 4.2.1: :: MUST be used for longest zero run")
     func compressionLongestRun() throws {
         // Multiple zero runs, longest should be compressed
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0db8, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0db8,
+            0x0000,
+            0x0000,
+            0x0000,
+            0x0001,
+            0x0000,
+            0x0001
+        )
         let text = String(address)
 
         // The run of 3 zeros (indices 2-4) should be compressed
@@ -45,7 +64,16 @@ struct RFC5952Tests {
     @Test("RFC 5952 Section 4.2.2: Single zero MUST NOT use ::")
     func singleZeroNoCompression() throws {
         // Single zeros should be represented as "0", not "::"
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0db8, 0x0000, 0x0001, 0x0000, 0x0002, 0x0000, 0x0003)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0db8,
+            0x0000,
+            0x0001,
+            0x0000,
+            0x0002,
+            0x0000,
+            0x0003
+        )
         let text = String(address)
 
         #expect(text == "2001:db8:0:1:0:2:0:3")
@@ -55,7 +83,16 @@ struct RFC5952Tests {
     @Test("RFC 5952 Section 4.2.3: Choose first occurrence when multiple equal runs")
     func compressionFirstOccurrence() throws {
         // Two runs of 2 zeros each - first should be compressed
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0001, 0x0001)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0000,
+            0x0000,
+            0x0001,
+            0x0000,
+            0x0000,
+            0x0001,
+            0x0001
+        )
         let text = String(address)
 
         // The first run (indices 1-2) should be compressed
@@ -66,7 +103,16 @@ struct RFC5952Tests {
 
     @Test("RFC 5952 Section 4.3: Hexadecimal digits MUST be lowercase")
     func lowercaseHexadecimal() throws {
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0db8, 0x0abc, 0x0def, 0x0000, 0x0000, 0x0000, 0x0001)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0db8,
+            0x0abc,
+            0x0def,
+            0x0000,
+            0x0000,
+            0x0000,
+            0x0001
+        )
         let text = String(address)
 
         #expect(text == "2001:db8:abc:def::1")
@@ -134,7 +180,16 @@ struct RFC5952Tests {
 
     @Test("No compression needed - no zero runs")
     func noCompressionNeeded() throws {
-        let address = RFC_4291.IPv6.Address(0x2001, 0x0db8, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006)
+        let address = RFC_4291.IPv6.Address(
+            0x2001,
+            0x0db8,
+            0x0001,
+            0x0002,
+            0x0003,
+            0x0004,
+            0x0005,
+            0x0006
+        )
         let text = String(address)
 
         #expect(text == "2001:db8:1:2:3:4:5:6")
@@ -167,7 +222,16 @@ struct RFC5952Tests {
 
     @Test("Maximum value segments")
     func maximumValueSegments() throws {
-        let address = RFC_4291.IPv6.Address(0xffff, 0xffff, 0xffff, 0xffff, 0xffff, 0xffff, 0xffff, 0xffff)
+        let address = RFC_4291.IPv6.Address(
+            0xffff,
+            0xffff,
+            0xffff,
+            0xffff,
+            0xffff,
+            0xffff,
+            0xffff,
+            0xffff
+        )
         let text = String(address)
 
         #expect(text == "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff")
