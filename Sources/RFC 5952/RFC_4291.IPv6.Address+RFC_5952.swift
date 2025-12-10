@@ -84,8 +84,7 @@ extension RFC_4291.IPv6.Address {
         for index in 0..<8 {
             // Handle compression
             if shouldCompress && index >= longestZeroRun.start
-                && index < longestZeroRun.start + longestZeroRun.length
-            {
+                && index < longestZeroRun.start + longestZeroRun.length {
                 if index == longestZeroRun.start {
                     // Section 4.2.2: "::" replaces the run
                     buffer.append(.ascii.colon)
