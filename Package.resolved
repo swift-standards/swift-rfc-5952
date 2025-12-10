@@ -1,13 +1,13 @@
 {
-  "originHash" : "7bea29222e10cc1965fb32571c5d21e3c6cc6e7ff12c37a192a777d053d44ee0",
+  "originHash" : "1c8a8ad6d5216f4f4ca104717b3a9b01cd285309ac4ed2b01d2c0964cb48f0d9",
   "pins" : [
     {
       "identity" : "swift-incits-4-1986",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-standards/swift-incits-4-1986",
       "state" : {
-        "revision" : "17fcd28216139523ac0c11145df726688e1764db",
-        "version" : "0.5.0"
+        "revision" : "115caab78c68c5e42774a92aeb1c40bd6719bfac",
+        "version" : "0.6.2"
       }
     },
     {
@@ -20,12 +20,30 @@
       }
     },
     {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "swift-rfc-4291",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-standards/swift-rfc-4291",
+      "state" : {
+        "revision" : "a5f23a26b45a0e2318733543827e1f2035e2ebdb",
+        "version" : "0.1.2"
+      }
+    },
+    {
       "identity" : "swift-rfc-4648",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-standards/swift-rfc-4648",
       "state" : {
-        "revision" : "605144b15521a55d264934a3b754f62ecdaca7db",
-        "version" : "0.2.0"
+        "revision" : "ea78a8c500d3e1fce15ccc97b28c9a85a21b5c33",
+        "version" : "0.5.2"
       }
     },
     {
@@ -33,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-standards/swift-standards",
       "state" : {
-        "revision" : "055b3bcb304c15dbf7250918153eecabfb80156f",
-        "version" : "0.5.0"
+        "revision" : "ccbf4e4c18f793bc858950d275624c1ef2a981a5",
+        "version" : "0.10.0"
       }
     },
     {
