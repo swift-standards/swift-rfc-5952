@@ -53,6 +53,6 @@ extension String {
     public init(_ address: RFC_4291.IPv6.Address) {
         // Compose through canonical byte representation
         // ASCII ⊂ UTF-8, so this is always valid
-        self.init(decoding: [UInt8](address), as: UTF8.self)
+        self.init(ascii: address)
     }
 }
